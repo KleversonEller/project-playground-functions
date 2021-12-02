@@ -19,11 +19,12 @@ function splitSentence(frase) {
   let palavraSeparadas = [];
   let palavra = "";
 
-  for(let comparador of frase){
-    palavra += comparador;
+  for(let comparador of frase){    
     if(comparador === " "){
       palavraSeparadas.push(palavra);
       palavra = "";
+    }else {
+      palavra += comparador;
     }
   }
   palavraSeparadas.push(palavra);
