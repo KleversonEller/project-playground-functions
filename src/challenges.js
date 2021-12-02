@@ -38,8 +38,10 @@ return fraseFormada;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontuacao = (wins * 3) + ties;
+  return pontuacao;
 }
 
 // Desafio 6
