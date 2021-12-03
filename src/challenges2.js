@@ -1,6 +1,22 @@
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+let resultado = null;
+let result = [];
+let listaTech = ["CSS", "HTML", "JavaScript", "Jest", "React"]
+
+  if(array == 0){
+    result = 'Vazio!';
+  } else {
+    for(let possicao of listaTech){
+      resultado = {
+        tech: possicao,
+        name: name
+      }
+      result.push(resultado);
+    }
+  }
+  return result;
 }
 
 // Desafio 11
