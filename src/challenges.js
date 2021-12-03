@@ -110,11 +110,46 @@ let resultado = [];
 }
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+let resultado = "";
+
+  for(let possicao of frase){
+    if(possicao === 'a'){
+      possicao = 1;
+    }else if (possicao === 'e'){
+      possicao = 2;
+    }else if (possicao === 'i'){
+      possicao = 3;
+    }else if (possicao === 'o'){
+      possicao = 4;
+    }else if (possicao === 'u'){
+      possicao = 5;
+    }
+    resultado += possicao;
+  }
+  return resultado;
 }
-function decode() {
+
+function decode(encode) {
   // seu código aqui
+  let resultado = "";
+
+  for(let possicao of encode){
+    if(possicao == 1){
+      possicao = 'a';
+    }else if (possicao == 2){
+      possicao = 'e';
+    }else if (possicao == 3){
+      possicao = 'i';
+    }else if (possicao == 4){
+      possicao = 'o';
+    }else if (possicao == 5){
+      possicao = 'u';
+    }
+    resultado += possicao;
+  }
+  return resultado;
 }
 
 module.exports = {
