@@ -29,8 +29,45 @@ resultado = '('+array[0]+array[1]+')'+' '+array[2]+array[3]+array[4]+array[5]+ar
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+let resultado = null;
+let restoA = null;
+let restoB = null;
+let restoC = null;
+
+  if((lineA - lineB) < 0){
+    restoC = (lineA - lineB) * -1;
+  }else {
+    restoC = (lineA - lineB);
+  }
+  if((lineB - lineC) < 0){
+    restoA = (lineB - lineC) * -1;
+  }else {
+    restoA = (lineB - lineC);
+  }
+  if((lineA - lineC) < 0){
+    restoB = (lineA - lineC) * -1;
+  }else {
+    restoB = (lineA - lineC);
+  }
+
+  if (lineA < (lineB + lineC) && lineA > Math.abs(restoA)){
+    resultado = true;
+  }else {
+    resultado = false;
+  }
+  if (lineB < (lineA + lineC) && lineB > Math.abs(restoB)){
+    resultado = true;
+  }else {
+    resultado = false;
+  }
+  if (lineC < (lineB + lineA) && lineC > Math.abs(restoC)){
+    resultado = true;
+  }else {
+    resultado = false;
+  }
+return resultado;
 }
 
 // Desafio 13
