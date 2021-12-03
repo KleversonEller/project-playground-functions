@@ -71,8 +71,21 @@ return resultado;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(frase) {
   // seu código aqui
+  let stringInteiros = frase.match(/\d+/g);
+  let quantidadeBebidas = 0;
+  let resultado = null;
+  
+  for(let possicao of stringInteiros){
+    quantidadeBebidas += parseInt(possicao);
+  }
+  if(quantidadeBebidas == 1){
+    resultado = quantidadeBebidas + ' copo de água';
+  }else {
+    resultado = quantidadeBebidas + ' copos de água';
+  }
+  return resultado;
 }
 
 module.exports = {
