@@ -3,12 +3,11 @@ function techList(array, name) {
   // seu código aqui
 let resultado = null;
 let result = [];
-let listaTech = ["CSS", "HTML", "JavaScript", "Jest", "React"]
 
   if(array == 0){
     result = 'Vazio!';
   } else {
-    for(let possicao of listaTech){
+    for(let possicao of array.sort()){
       resultado = {
         tech: possicao,
         name: name
