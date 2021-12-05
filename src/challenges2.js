@@ -51,33 +51,17 @@ let restoA = null;
 let restoB = null;
 let restoC = null;
 
-  if((lineA - lineB) < 0){
-    restoC = (lineA - lineB) * -1;
-  }else {
-    restoC = (lineA - lineB);
-  }
-  if((lineB - lineC) < 0){
-    restoA = (lineB - lineC) * -1;
-  }else {
-    restoA = (lineB - lineC);
-  }
-  if((lineA - lineC) < 0){
-    restoB = (lineA - lineC) * -1;
-  }else {
-    restoB = (lineA - lineC);
-  }
-
-  if (lineA < (lineB + lineC) && lineA > Math.abs(restoA)){
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)){
     resultado = true;
   }else {
     resultado = false;
   }
-  if (lineB < (lineA + lineC) && lineB > Math.abs(restoB)){
+  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)){
     resultado = true;
   }else {
     resultado = false;
   }
-  if (lineC < (lineB + lineA) && lineC > Math.abs(restoC)){
+  if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)){
     resultado = true;
   }else {
     resultado = false;
