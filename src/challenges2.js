@@ -24,7 +24,8 @@ function generatePhoneNumber(array) {
 let resultado = null;
 let cont = 0;
 
-resultado = '('+array[0]+array[1]+')'+' '+array[2]+array[3]+array[4]+array[5]+array[6]+'-'+array[7]+array[8]+array[9]+array[10];  
+resultado = '('+array[0]+array[1]+')'+' '+array[2]+array[3]+array[4]+array[5]+array[6]+'-'+array[7]+array[8]+array[9]+array[10]; 
+ 
   if (array.length !== 11){
     resultado = "Array com tamanho incorreto.";
   }else { 
